@@ -1,5 +1,6 @@
 
-var speed = 500;
+var speed1 = 500;
+var speed2 = 250;
 var space = 100;
 
 $('.hassubmenu').hover(
@@ -15,8 +16,8 @@ $('.hassubmenu').hover(
 
         $(submenu).css('top',$(submenucontainer).height() - $(submenu).height() );
 
-        $(submenu).stop().animate({top:$(this).height() - 1},speed);
-        $(submenucontainer).stop().animate({height:$(this).height() + $(submenu).height()},speed);
+        $(submenu).stop().animate({top:$(this).height() - 1},speed1);
+        $(submenucontainer).stop().animate({height:$(this).height() + $(submenu).height()},speed1);
 	},
 	function(event)
 	{
@@ -33,7 +34,7 @@ $('.submenu-container').hover(
         var submenu = $(this).find('.sub-menu');
         $(this).css('height',$(submenu).height()).css('top',0);
         $(submenu).css('top',0);
-        $(this).stop().animate({height:0},speed);
+        $(this).stop().animate({height:0},speed2);
     }
 );
 
