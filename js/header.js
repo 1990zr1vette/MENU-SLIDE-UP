@@ -14,9 +14,8 @@ $('.hassubmenu').hover(
         $(submenucontainer).css('top','-' + $(this).height() + 'px');
         $(submenucontainer).css('display','block');
 
-        $(submenu).css('top',$(submenucontainer).height() - $(submenu).height() );
+        $(submenu).css('top',$(submenucontainer).height() - $(submenu).height());
 
-        //
         $(submenu).addClass('scale').stop().animate({top:$(this).height() - 1},speed1,function()
         {
             $(submenu).removeClass('scale');
