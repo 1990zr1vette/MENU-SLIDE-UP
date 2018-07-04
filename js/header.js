@@ -1,7 +1,7 @@
 
 var speed1 = 500;
 var speed2 = 250;
-var space = 100;
+var space = 0;
 
 $('.hassubmenu').hover(
 	function(event)
@@ -16,7 +16,12 @@ $('.hassubmenu').hover(
 
         $(submenu).css('top',$(submenucontainer).height() - $(submenu).height() );
 
-        $(submenu).stop().animate({top:$(this).height() - 1},speed1);
+        //
+        $(submenu).addClass('scale').stop().animate({top:$(this).height() - 1},speed1,function()
+        {
+            $(submenu).removeClass('scale');
+        });
+
         $(submenucontainer).stop().animate({height:$(this).height() + $(submenu).height()},speed1);
 	},
 	function(event)
